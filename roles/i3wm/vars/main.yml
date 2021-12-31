@@ -13,6 +13,7 @@ i3wm:
     - playerctl
     - rofi
     - fonts-font-awesome
+    - system-config-printer
 
 i3lockcolor_dep:
     - autoconf
