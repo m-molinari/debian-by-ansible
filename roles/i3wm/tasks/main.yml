@@ -31,3 +31,13 @@
   become_user: "{{ user.name }}"
   shell:  cd "{{ user.home }}/i3lock-color" && ./build.sh && ./install-i3lock-color.sh
 
+- name: NetworkManager service enable
+  become: yes
+  become_user: root
+  become_method: sudo
+
+  systemd:
+    name: NetworkManager
+    state: started
+    enabled: yes
+
