@@ -18,3 +18,16 @@
     dest: "{{ user.home }}/.config/i3blocks-contrib"
     clone: yes
     update: yes
+
+- name: Clone github repo i3lock-color
+  git:
+    repo: https://github.com/Raymo111/i3lock-color
+    dest: "{{ user.home }}"
+    clone: yes
+    update: yes
+
+- name: compile and install i3lock-color
+  become: yes
+  become_user: "{{ user.name }}"
+  shell:  cd "{{ user.home }}/i3lock-color" && ./build.sh && ./install-i3lock-color.sh
+
