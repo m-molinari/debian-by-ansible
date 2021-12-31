@@ -1,0 +1,20 @@
+---
+- name: Install packages
+  apt: name={{item}} state=present update_cache=true
+  with_items:
+    - ['{{ i3wm }}']
+
+- name: Create xinitrc file
+  copy:
+    src: files/xinitrc
+    dest: "{{ user.home }}/.xinitrc"
+    owner: "{{ user.name }}"
+    group: "{{ user.name }}"
+    mode: '0644'
+
+- name: Clone a github repository
+  git:
+    repo: https://github.com/vivien/i3blocks-contrib
+    dest: "{{ user.home }}/.config/i3blocks-contrib"
+    clone: yes
+    update: yes
