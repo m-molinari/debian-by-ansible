@@ -8,8 +8,10 @@ i3wm:
     - i3status
     - i3blocks
     - nitrogen
+    - mate-backgrounds
     - network-manager-gnome
     - network-manager  
+    - nemo
     - picom
     - playerctl
     - rofi
