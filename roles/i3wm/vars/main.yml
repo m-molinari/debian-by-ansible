@@ -2,6 +2,7 @@
 i3wm:
     - alsa-utils
     - arandr
+    - desktop-base
     - feh
     - i3-wm
     - i3status
