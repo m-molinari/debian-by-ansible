@@ -23,6 +23,7 @@ i3wm:
     - volumeicon-alsa
     - xterm
     - xfce4-power-manager
+    - xbacklight
 
 i3lockcolor_dep:
     - autoconf
