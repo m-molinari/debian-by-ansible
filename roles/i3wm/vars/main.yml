@@ -3,20 +3,26 @@ i3wm:
     - alsa-utils
     - arandr
     - desktop-base
+    - dunst
     - feh
     - i3-wm
     - i3status
     - i3blocks
+    - lightdm-settings
     - nitrogen
     - mate-backgrounds
     - network-manager-gnome
     - network-manager  
     - nemo
     - picom
+    - policykit-1-gnome
     - playerctl
     - rofi
     - fonts-font-awesome
     - system-config-printer
+    - volumeicon-alsa
+    - xterm
+    - xfce4-power-manager
 
 i3lockcolor_dep:
     - autoconf
