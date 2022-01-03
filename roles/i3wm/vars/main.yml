@@ -1,9 +1,11 @@
 ---
 i3wm:
+    - arc-theme
     - alsa-utils
     - arandr
     - desktop-base
     - dunst
+    - eog
     - feh
     - i3-wm
     - i3status
