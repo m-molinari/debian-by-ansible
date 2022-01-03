@@ -31,6 +31,26 @@
   become_user: "{{ user.name }}"
   shell:  cd "{{ user.home }}/i3lock-color" && ./build.sh && ./install-i3lock-color.sh
 
+- name: Clone github repo i3block
+  git:
+    repo: https://github.com/vivien/i3blocks
+    dest: "{{ user.home }}"
+    clone: yes
+    update: yes
+
+- name: compile i3block
+  become: yes
+  become_user: "{{ user.name }}"
+  shell:  cd "{{ user.home }}/i3blocks" && ./autogen.sh && ./configure && make && sudo make install
+
+- name: install i3block
+  become: yes
+
+  become_user: "{{ user.name }}"
+  become_user: root
+  become_method: sudo
+  shell:  cd "{{ user.home }}/i3blocks" &&  make install
+
 - name: NetworkManager service enable
   become: yes
   become_user: root

@@ -9,7 +9,7 @@ i3wm:
     - feh
     - i3-wm
     - i3status
-    - i3blocks
+#    - i3blocks
     - lightdm-settings
     - lxappearance
     - nitrogen
