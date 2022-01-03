@@ -18,6 +18,7 @@ i3wm:
     - picom
     - policykit-1-gnome
     - playerctl
+    - ranger
     - rofi
     - rxvt
     - fonts-font-awesome
