@@ -24,6 +24,7 @@ i3wm:
     - fonts-font-awesome
     - system-config-printer
     - volumeicon-alsa
+    - xautolock
     - xterm
     - xfce4-power-manager
     - xbacklight
