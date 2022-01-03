@@ -11,6 +11,7 @@ i3wm:
     - i3status
     - i3blocks
     - lightdm-settings
+    - lxappearance
     - nitrogen
     - mate-backgrounds
     - network-manager-gnome
@@ -19,7 +20,9 @@ i3wm:
     - picom
     - policykit-1-gnome
     - playerctl
+    - ranger
     - rofi
+    - rxvt
     - fonts-font-awesome
     - system-config-printer
     - volumeicon-alsa
