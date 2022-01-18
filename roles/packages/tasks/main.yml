@@ -10,3 +10,8 @@
        - ['{{ bash }}']
        - ['{{ fonts }}']
        - ['{{ sys }}']
+
+- name: Remove packages
+  apt: name={{item}} state=absent
+  with_items:
+       - ['{{ firefox_lang }}']
