@@ -3,5 +3,6 @@
   connection: local
   become: yes
   roles:
+    - astronomy
     - packages
     - iptables
