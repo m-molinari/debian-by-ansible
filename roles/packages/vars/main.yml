@@ -1,6 +1,7 @@
 ---
 themes:
     - adwaita-icon-theme
+    - breeze-cursor-theme
     - faenza-icon-theme
     - gnome-wise-icon-theme
 desktop_utilities:
