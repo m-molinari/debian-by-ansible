@@ -1,0 +1,8 @@
+---
+- name: manage services
+  systemd:
+    name: exim4
+    state: stopped
+    enabled: no
+
+
