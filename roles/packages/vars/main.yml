@@ -78,6 +78,29 @@ sys:
     - whois
     - wget
 
+blacklist:
+    - cheese
+    - unattended-upgrades
+
+cinnamon_games:
+    - aisleriot
+    - gnome-chess
+    - gnome-klotski
+    - gnome-mahjongg
+    - gnome-mines
+    - gnome-nibbles
+    - gnome-robots
+    - gnome-sudoku
+    - gnome-taquin
+    - gnome-tetravex
+    - hitori
+    - iagno
+    - lightsoff
+    - quadrapassel
+    - swell-foop
+    - five-or-more
+    - tali
+
 firefox_lang:
     - firefox-esr-l10n-ar
     - firefox-esr-l10n-ast
@@ -142,3 +165,4 @@ firefox_lang:
     - firefox-esr-l10n-vi
     - firefox-esr-l10n-zh-cn
     - firefox-esr-l10n-zh-tw
+

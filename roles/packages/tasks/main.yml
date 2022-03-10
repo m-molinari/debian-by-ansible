@@ -15,3 +15,5 @@
   apt: name={{item}} state=absent
   with_items:
        - ['{{ firefox_lang }}']
+       - ['{{ blacklist }}']
+       - ['{{ cinnamon_games }}']

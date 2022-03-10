@@ -1,8 +1,24 @@
 ---
-- name: manage services
+- name: stop and disable exim4
   systemd:
     name: exim4
     state: stopped
     enabled: no
 
+- name: stop and disable systemd-timesyncd
+  systemd:
+    name: systemd-timesyncd
+    state: stopped
+    enabled: no
+
+- name: install ntp
+  apt:
+    name: ntp
+    state: present
+
+- name: start and enable ntp
+  systemd:
+    name: ntp
+    state: started
+    enabled: yes
 
