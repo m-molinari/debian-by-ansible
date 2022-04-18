@@ -71,6 +71,7 @@ sys:
     - rsync
     - smbclient
     - tcpdump
+    - telnet
     - terminator
     - usbutils
     - unrar
