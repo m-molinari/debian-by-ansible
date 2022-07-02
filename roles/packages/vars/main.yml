@@ -49,6 +49,10 @@ bash:
 fonts:
     - fonts-cantarell
     - fonts-hack
+libs:
+    - libdvdnav4
+    - libdvdread8
+    - libdvd-pkg
 sys:
     - bc
     - binutils

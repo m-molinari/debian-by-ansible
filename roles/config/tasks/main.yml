@@ -1,0 +1,7 @@
+---
+# tasks file for config
+- name: adding contrib and non-free repository
+  replace:
+     path: /etc/apt/sources.list
+     regexp: 'main'
+     replace: 'main contrib non-free'
