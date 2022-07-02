@@ -5,3 +5,4 @@
      path: /etc/apt/sources.list
      regexp: 'main'
      replace: 'main contrib non-free'
+     backup: yes
