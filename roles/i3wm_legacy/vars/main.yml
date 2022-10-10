@@ -1,0 +1,32 @@
+---
+i3wm:
+    - arc-theme
+    - alsa-utils
+    - arandr
+    - desktop-base
+    - dunst
+    - eog
+    - feh
+    - i3-wm
+    - i3status
+    - lightdm-settings
+    - lxappearance
+    - nitrogen
+    - mate-backgrounds
+    - network-manager-gnome
+    - network-manager  
+    - nemo
+    - picom
+    - policykit-1-gnome
+    - playerctl
+    - ranger
+    - rofi
+    - rxvt
+    - fonts-font-awesome
+    - system-config-printer
+    - volumeicon-alsa
+    - xautolock
+    - xterm
+    - xfce4-power-manager
+    - xbacklight
+
