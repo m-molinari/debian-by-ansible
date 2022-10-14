@@ -49,6 +49,7 @@ bash:
 fonts:
     - fonts-cantarell
     - fonts-hack
+    - fonts-firacode
 libs:
     - libdvdnav4
     - libdvdread8
