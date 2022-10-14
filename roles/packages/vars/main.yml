@@ -46,6 +46,11 @@ bash:
     - bash-completion
     - neofetch
     - tree
+zsh:
+    - zsh
+    - zsh-autosuggestions
+    - zsh-common
+    - zsh-syntax-highlighting
 fonts:
     - fonts-cantarell
     - fonts-hack
