@@ -25,6 +25,7 @@ desktop_utilities:
     - psensor
     - vlc
 accessories:
+    - ncal
     - keepassxc
     - gedit
     - gimp
