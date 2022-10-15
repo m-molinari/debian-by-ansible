@@ -30,8 +30,8 @@ accessories:
     - gimp
     - imagemagick
     - meld
+    - redshift
     - vim
-    - curl
 clients:
     - firefox-esr
     - filezilla
