@@ -27,13 +27,19 @@
     jump: ACCEPT
 
 - name: Save iptables rules
-  shell:  /usr/sbin/iptables-save -f /etc/iptables.up.rules
+  shell:  /usr/sbin/iptables-save -f /etc/iptables/rules.v4
 
-- name: Copy script
-  copy:
-     src: iptables
-     dest: /etc/network/if-pre-up.d/iptables
-     owner: root
-     group: root
-     mode: '0744'
+- name: enable netfilter-persistent
+  systemd:
+    name: netfilter-persistent
+    state: started
+    enabled: yes
+
+#- name: Copy script
+#  copy:
+#     src: iptables
+#     dest: /etc/network/if-pre-up.d/iptables
+#     owner: root
+#     group: root
+#     mode: '0744'
 
