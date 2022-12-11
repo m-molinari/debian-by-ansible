@@ -1,0 +1,4 @@
+---
+- name: Install python3-pymysql python package
+  ansible.builtin.pip:
+    name: python3-pymysql
