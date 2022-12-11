@@ -90,6 +90,8 @@ sys:
     - zip
     - whois
     - wget
+dev:
+    - python3-pip
 
 blacklist:
     - cheese
