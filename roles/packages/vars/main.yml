@@ -93,6 +93,7 @@ sys:
     - wget
 dev:
     - python3-pip
+    - python3-venv
 
 blacklist:
     - cheese
