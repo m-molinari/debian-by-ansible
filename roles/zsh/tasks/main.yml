@@ -1,0 +1,5 @@
+---
+- name: Install zsh packages
+  apt: name={{item}} state=present update_cache=true
+  with_items:
+    - ['{{ zsh }}']
