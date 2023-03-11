@@ -81,6 +81,7 @@ sys:
     - logrotate
     - net-tools
     - ntfs-3g
+    - ncdu
     - openssh-client
     - p7zip
     - rsync
