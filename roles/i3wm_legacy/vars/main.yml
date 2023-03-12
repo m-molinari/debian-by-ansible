@@ -12,6 +12,7 @@ i3wm:
     - lightdm-settings
     - lxappearance
     - nitrogen
+    - maim
     - mate-backgrounds
     - network-manager-gnome
     - network-manager  
@@ -22,6 +23,7 @@ i3wm:
     - ranger
     - rofi
     - rxvt
+    - scrot
     - fonts-font-awesome
     - system-config-printer
     - volumeicon-alsa

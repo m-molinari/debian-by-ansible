@@ -13,6 +13,7 @@ i3wm:
     - lightdm-settings
     - lxappearance
     - nitrogen
+    - maim
     - mate-backgrounds
     - network-manager-gnome
     - network-manager  
@@ -25,6 +26,7 @@ i3wm:
     - rxvt
     - fonts-font-awesome
     - system-config-printer
+    - scrot
     - volumeicon-alsa
     - xautolock
     - xterm
