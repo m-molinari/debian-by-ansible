@@ -19,6 +19,7 @@ i3wm:
     - nemo
     - picom
     - policykit-1-gnome
+    - polybar
     - playerctl
     - ranger
     - rofi
