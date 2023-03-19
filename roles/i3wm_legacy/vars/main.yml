@@ -16,9 +16,11 @@ i3wm:
     - nitrogen
     - maim
     - mate-backgrounds
+    #- moc
     - network-manager-gnome
     - network-manager  
     - nemo
+    - pavucontrol
     - picom
     - policykit-1-gnome
     - polybar
