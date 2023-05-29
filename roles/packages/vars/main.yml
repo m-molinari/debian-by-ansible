@@ -75,6 +75,8 @@ sys:
     - gnupg2
     - htop
     - iputils-ping
+    - iftop
+    - iptraf-ng
     - linux-headers-amd64
     - lm-sensors
     - lsof
