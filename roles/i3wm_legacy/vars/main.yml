@@ -36,4 +36,5 @@ i3wm:
     - xterm
     - xfce4-power-manager
     - xbacklight
+    - yad
 
