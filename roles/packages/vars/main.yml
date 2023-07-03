@@ -11,6 +11,7 @@ desktop_utilities:
     - bluez
     - brasero
     - bleachbit
+    - cherrytree
     - deja-dup
     - evince
     - gedit
@@ -31,7 +32,7 @@ accessories:
     - gimp
     - imagemagick
     - meld
-    - pavucontrol
+    #- pavucontrol
     - redshift
     - vim
     - vorta
@@ -39,7 +40,6 @@ clients:
     - firefox-esr
     - filezilla
     - thunderbird
-    - enigmail
 games:
     - pcsxr
 graphics:
@@ -76,12 +76,16 @@ sys:
     - htop
     - iputils-ping
     - iftop
+    - ipcalc
     - iptraf-ng
+    - iptables
+    - iptables-persistent
     - linux-headers-amd64
     - lm-sensors
     - lsof
     - logrotate
     - net-tools
+    - netselect-apt
     - ntfs-3g
     - ncdu
     - openssh-client
@@ -92,7 +96,6 @@ sys:
     - telnet
     - terminator
     - usbutils
-    - unrar
     - zip
     - whois
     - wget
