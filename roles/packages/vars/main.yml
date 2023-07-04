@@ -18,6 +18,7 @@ desktop_utilities:
     - gnome-calculator
     - gnome-disk-utility
     - gnome-screenshot
+    - gprename
     - gparted
     - kazam
     - rhythmbox
@@ -91,6 +92,7 @@ sys:
     - openssh-client
     - p7zip
     - rsync
+    - rsyslog
     - smbclient
     - tcpdump
     - telnet
