@@ -87,6 +87,7 @@ sys:
     - logrotate
     - net-tools
     - netselect-apt
+    - nfs-common
     - ntfs-3g
     - ncdu
     - openssh-client
