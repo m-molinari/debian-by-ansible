@@ -92,6 +92,7 @@ sys:
     - ncdu
     - openssh-client
     - p7zip
+    - renameutils
     - rsync
     - rsyslog
     - smbclient
