@@ -1,20 +1,22 @@
 ---
-# tasks file for config
-- name: get value
-  shell:
-    cmd: grep -c "contrib non-free" /etc/apt/sources.list
-  register: grep_output
-  ignore_errors: yes
-  changed_when: false
-
-- name: Print
-  debug:
-    var="grep_output.stdout_lines"
-
-- name: adding contrib and non-free repository
-  replace:
-     path: /etc/apt/sources.list
-     regexp: 'main'
-     replace: 'main contrib non-free'
-     backup: yes
-  when: grep_output.stdout == '0'
+- name: config tasks
+  tags: config
+  block:
+  - name: get value
+    shell:
+      cmd: grep -c "contrib non-free" /etc/apt/sources.list
+    register: grep_output
+    ignore_errors: yes
+    changed_when: false
+  
+  - name: Print
+    debug:
+      var="grep_output.stdout_lines"
+  
+  - name: adding contrib and non-free repository
+    replace:
+       path: /etc/apt/sources.list
+       regexp: 'main'
+       replace: 'main contrib non-free'
+       backup: yes
+    when: grep_output.stdout == '0'

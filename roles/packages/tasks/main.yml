@@ -1,20 +1,23 @@
 ---
-- name: Install packages
-  apt: name={{item}} state=present update_cache=true
-  with_items:
-       - ['{{ themes }}']
-       - ['{{ desktop_utilities }}']
-       - ['{{ accessories }}']
-       - ['{{ clients }}']
-       - ['{{ games }}']
-       - ['{{ bash }}']
-       - ['{{ fonts }}']
-       - ['{{ sys }}']
-       - ['{{ dev }}']
-
-- name: Remove packages
-  apt: name={{item}} state=absent
-  with_items:
-       - ['{{ firefox_lang }}']
-       - ['{{ blacklist }}']
-       - ['{{ cinnamon_games }}']
+- name: packages tasks
+  tags: packages
+  block:
+  - name: Install packages
+    apt: name={{item}} state=present update_cache=true
+    with_items:
+         - ['{{ themes }}']
+         - ['{{ desktop_utilities }}']
+         - ['{{ accessories }}']
+         - ['{{ clients }}']
+         - ['{{ games }}']
+         - ['{{ bash }}']
+         - ['{{ fonts }}']
+         - ['{{ sys }}']
+         - ['{{ dev }}']
+  
+  - name: Remove packages
+    apt: name={{item}} state=absent
+    with_items:
+         - ['{{ firefox_lang }}']
+         - ['{{ blacklist }}']
+         - ['{{ cinnamon_games }}']

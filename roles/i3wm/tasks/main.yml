@@ -1,78 +1,82 @@
 ---
-- name: Install packages
-  apt: name={{item}} state=present update_cache=true
-  with_items:
-    - ['{{ i3wm }}']
+- name: i3wm tasks
+  tags: i3wm
+  block:
 
-- name: Create xinitrc file
-  copy:
-    src: files/xinitrc
-    dest: "{{ user.home }}/.xinitrc"
-    owner: "{{ user.name }}"
-    group: "{{ user.name }}"
-    mode: '0644'
-
-- name: Clone a github repository
-  git:
-    repo: https://github.com/vivien/i3blocks-contrib
-    dest: "{{ user.home }}/.config/i3blocks-contrib"
-    clone: yes
-    update: yes
-
-- name: Clone github repo i3lock-color
-  git:
-    repo: https://github.com/Raymo111/i3lock-color
-    dest: "{{ user.home }}"
-    clone: yes
-    update: yes
-
-- name: compile and install i3lock-color
-  become: yes
-  become_user: "{{ user.name }}"
-  shell:  cd "{{ user.home }}/i3lock-color" && ./build.sh && ./install-i3lock-color.sh
-
-- name: Clone github repo i3block
-  git:
-    repo: https://github.com/vivien/i3blocks
-    dest: "{{ user.home }}"
-    clone: yes
-    update: yes
-
-- name: compile i3block
-  become: yes
-  become_user: "{{ user.name }}"
-  shell:  cd "{{ user.home }}/i3blocks" && ./autogen.sh && ./configure && make && sudo make install
-
-- name: install i3block
-  become: yes
-
-  become_user: "{{ user.name }}"
-  become_user: root
-  become_method: sudo
-  shell:  cd "{{ user.home }}/i3blocks" &&  make install
-
-- name: NetworkManager service enable
-  become: yes
-  become_user: root
-  become_method: sudo
-
-  systemd:
-    name: NetworkManager
-    state: started
-    enabled: yes
-
-- name: Creates directory xorg.conf.d in /etc/X11/
-  file:
-    path: /etc/X11/xorg.conf.d
-    state: directory
-    owner: root
-    group: root
-    mode: 0755
-
-- name: Copy 90-touchpad.conf in /etc/X11/xorg.conf.d/
-  copy:
-    src: files/90-touchpad.conf
-    dest: /etc/X11/xorg.conf.d
-    owner: root
-    group: root
-    mode: '0644'
+  - name: Install packages
+    apt: name={{item}} state=present update_cache=true
+    with_items:
+      - ['{{ i3wm }}']
+  
+  - name: Create xinitrc file
+    copy:
+      src: files/xinitrc
+      dest: "{{ user.home }}/.xinitrc"
+      owner: "{{ user.name }}"
+      group: "{{ user.name }}"
+      mode: '0644'
+  
+  - name: Clone a github repository
+    git:
+      repo: https://github.com/vivien/i3blocks-contrib
+      dest: "{{ user.home }}/.config/i3blocks-contrib"
+      clone: yes
+      update: yes
+  
+  - name: Clone github repo i3lock-color
+    git:
+      repo: https://github.com/Raymo111/i3lock-color
+      dest: "{{ user.home }}"
+      clone: yes
+      update: yes
+  
+  - name: compile and install i3lock-color
+    become: yes
+    become_user: "{{ user.name }}"
+    shell:  cd "{{ user.home }}/i3lock-color" && ./build.sh && ./install-i3lock-color.sh
+  
+  - name: Clone github repo i3block
+    git:
+      repo: https://github.com/vivien/i3blocks
+      dest: "{{ user.home }}"
+      clone: yes
+      update: yes
+  
+  - name: compile i3block
+    become: yes
+    become_user: "{{ user.name }}"
+    shell:  cd "{{ user.home }}/i3blocks" && ./autogen.sh && ./configure && make && sudo make install
+  
+  - name: install i3block
+    become: yes
+  
+    become_user: "{{ user.name }}"
+    become_user: root
+    become_method: sudo
+    shell:  cd "{{ user.home }}/i3blocks" &&  make install
+  
+  - name: NetworkManager service enable
+    become: yes
+    become_user: root
+    become_method: sudo
+  
+    systemd:
+      name: NetworkManager
+      state: started
+      enabled: yes
+  
+  - name: Creates directory xorg.conf.d in /etc/X11/
+    file:
+      path: /etc/X11/xorg.conf.d
+      state: directory
+      owner: root
+      group: root
+      mode: 0755
+  
+  - name: Copy 90-touchpad.conf in /etc/X11/xorg.conf.d/
+    copy:
+      src: files/90-touchpad.conf
+      dest: /etc/X11/xorg.conf.d
+      owner: root
+      group: root
+      mode: '0644'
